@@ -22,10 +22,10 @@ namespace PassportCardLabsAssignment.PolicyReader
             PolicyFilePath = policeFilePath;
         }
 
-        public Tuple<PolicyType,string> ReadPolicy() //TODO: double serialization in ctor, should be dynamic
+        public Tuple<PolicyType,string> ReadPolicy() 
         {
             string policyJson = File.ReadAllText(PolicyFilePath);
-            dynamic policy = JsonConvert.DeserializeObject<dynamic>(policyJson); //TODO: maybe serialize to IPolicy instead of dynamic, duplicate in factory
+            dynamic policy = JsonConvert.DeserializeObject<dynamic>(policyJson); 
             if (policy == null)
             {
                 Console.WriteLine("Failed to parse policy settings");
