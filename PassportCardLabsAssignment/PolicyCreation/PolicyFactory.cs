@@ -25,7 +25,7 @@ namespace PassportCardLabsAssignment.Policy
             var concretePolicy = JsonConvert.DeserializeObject(policyJson, policySettings.ConcretePropertyType, new StringEnumConverter());
             if (concretePolicy == null)
             {
-                throw new PolicyNotFoundException();
+                throw new PolicyCreationException($"Failed to parse policy of type {Enum.GetName(policyType)}.");
             }
             IPolicy policy = concretePolicy as IPolicy;
             policy.PolicyValidation = policySettings.PolicyValidation;
