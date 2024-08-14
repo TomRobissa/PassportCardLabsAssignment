@@ -7,13 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TestRating;
 
-namespace PassportCardLabsAssignment.Policy
+namespace PassportCardLabsAssignment.PolicyReader
 {
-    public interface IPolicyFileReader
-    {
-        public string PolicyFilePath { get; set; }
-        public Tuple<PolicyType, string> ReadPolicy();
-    }
     public class PolicyJsonFileReader : IPolicyFileReader
     {
         public string PolicyFilePath { get; set; }

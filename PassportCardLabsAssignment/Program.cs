@@ -1,5 +1,5 @@
 ﻿using PassportCardLabsAssignment.Policy;
-using System;
+using PassportCardLabsAssignment.PolicyReader;
 
 namespace TestRating
 {

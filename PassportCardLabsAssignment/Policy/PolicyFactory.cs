@@ -20,7 +20,7 @@ namespace PassportCardLabsAssignment.Policy
         public static IPolicy CreatePolicy(PolicyType policyType, string policyJson)
         {
             var concretePolicyType = PolicyTypeToPolicy[policyType];
-            var concretePolicy = JsonConvert.DeserializeObject(policyJson, concretePolicyType);
+            var concretePolicy = JsonConvert.DeserializeObject(policyJson, concretePolicyType, new StringEnumConverter());
             if (concretePolicy == null)
             {
                 throw new PolicyNotFoundException();

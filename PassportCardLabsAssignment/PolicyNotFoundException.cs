@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace PassportCardLabsAssignment.Policy
+namespace PassportCardLabsAssignment
 {
     [Serializable]
     internal class PolicyNotFoundException : Exception
