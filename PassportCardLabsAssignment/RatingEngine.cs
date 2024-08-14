@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using PassportCardLabsAssignment.Policy;
 using System;
 using System.IO;
 
@@ -57,19 +58,19 @@ namespace TestRating
                             Rating = 1000m;
                         }
                     }
-                    
+
 
                     break;
 
                 case PolicyType.Travel:
                     Console.WriteLine("Rating TRAVEL policy...");
                     Console.WriteLine("Validating policy.");
-                    if (policy.Days <=0)
+                    if (policy.Days <= 0)
                     {
                         Console.WriteLine("Travel policy must specify Days.");
                         return;
                     }
-                    if (policy.Days >180)
+                    if (policy.Days > 180)
                     {
                         Console.WriteLine("Travel policy cannot be more then 180 Days.");
                         return;
@@ -104,7 +105,7 @@ namespace TestRating
                         Console.WriteLine("Life policy must include an Amount.");
                         return;
                     }
-                    
+
                     int age = DateTime.Today.Year - policy.DateOfBirth.Year;
                     if (policy.DateOfBirth.Month == DateTime.Today.Month &&
                         DateTime.Today.Day < policy.DateOfBirth.Day ||
@@ -128,5 +129,6 @@ namespace TestRating
 
             Console.WriteLine("Rating completed.");
         }
+
     }
 }
