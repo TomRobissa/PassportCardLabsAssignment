@@ -22,9 +22,9 @@ namespace TestRating
 
             // load policy - open file policy.json
             IPolicyFileReader policyFileReader = new PolicyJsonFileReader("policy.json");
-            var policyTypeAndPolicy = policyFileReader.ReadPolicy();
+            var policyTypeAndPolicyJson = policyFileReader.ReadPolicy();
 
-            IPolicy policy = PolicyFactory.CreatePolicy(policyTypeAndPolicy.Item1, policyTypeAndPolicy.Item2);
+            IPolicy policy = PolicyFactory.CreatePolicy(policyTypeAndPolicyJson.Item1, policyTypeAndPolicyJson.Item2);
 
             Console.WriteLine($"Validating {Enum.GetName(policy.Type)} policy.");
             if (!policy.IsValid)
