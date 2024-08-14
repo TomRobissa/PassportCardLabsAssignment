@@ -1,4 +1,5 @@
 ﻿using PassportCardLabsAssignment.Policy;
+using PassportCardLabsAssignment.PolicyRating;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace PassportCardLabsAssignment.Policy
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
         public decimal Deductible { get; set; }
+        public IPolicyRating PolicyRating { get; set; }
     }
 }

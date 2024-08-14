@@ -7,19 +7,14 @@ namespace TestRating
     {
         static void Main(string[] args)
         {
-
-            var x = DateTime.MinValue;
             IPolicyFileReader policyFileReader = new PolicyJsonFileReader("policy.json");
-
             var policyTypeAndPolicy = policyFileReader.ReadPolicy();
             IPolicy policy = PolicyFactory.CreatePolicy(policyTypeAndPolicy.Item1, policyTypeAndPolicy.Item2);
             if (!policy.IsValid)
             {
                 return; 
             }
-
-            TravelPolicy? travelPolicy = policy as TravelPolicy;
-            Console.WriteLine(travelPolicy.Days);
+            Console.WriteLine($"Rating completed: rating is {policy.Rating}");
         }
 
         private static void PreviousMain()

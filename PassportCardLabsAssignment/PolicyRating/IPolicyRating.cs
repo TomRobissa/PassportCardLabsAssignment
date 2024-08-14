@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace PassportCardLabsAssignment.PolicyRating
 {
-    internal interface IPolicyRating
+    public interface IPolicyRating
     {
+        public decimal Rating { get; }
         public decimal RatePolicy(IPolicy policy);
     }
 }
