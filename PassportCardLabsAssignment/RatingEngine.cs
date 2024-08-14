@@ -41,7 +41,10 @@ namespace TestRating
                         {
                             Rating = 1000m;
                         }
-                        Rating = 900m;
+                        else
+                        {
+                            Rating = 900m;
+                        }
                     }
                     else
                     {
@@ -49,7 +52,10 @@ namespace TestRating
                         {
                             Rating = 1100m;
                         }
-                        Rating = 1000m;
+                        else
+                        {
+                            Rating = 1000m;
+                        }
                     }
                     
 
