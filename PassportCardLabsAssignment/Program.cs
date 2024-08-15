@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassportCardLabsAssignment.Policy;
+using PassportCardLabsAssignment.PolicyReader;
 
 namespace TestRating
 {
@@ -19,7 +20,8 @@ namespace TestRating
             {
                 Console.WriteLine("No rating produced.");
             }
-
         }
+
+
     }
 }
